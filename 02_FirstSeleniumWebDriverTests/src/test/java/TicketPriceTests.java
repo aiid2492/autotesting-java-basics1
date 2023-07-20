@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TicketPrice {
+public class TicketPriceTest {
     @Test
     public void TicketPricePercent()
     {

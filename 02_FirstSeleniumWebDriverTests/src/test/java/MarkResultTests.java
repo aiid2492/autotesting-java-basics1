@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MarkResult {
+public class MarkResultTest {
         @Test
         public  void testRaven2()
         {
