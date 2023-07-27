@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SeleniumTests" />
         <module name="03_SearchElementsWithSelenium" />
-        <module name="04_SearchWithCSS" />
       </profile>
     </annotationProcessing>
   </component>
