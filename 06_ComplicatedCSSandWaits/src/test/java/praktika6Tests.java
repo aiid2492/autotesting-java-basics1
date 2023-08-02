@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class praktika6Tests {
 
@@ -19,7 +20,8 @@ public class praktika6Tests {
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
 
@@ -50,6 +52,7 @@ public class praktika6Tests {
 
 
 
+
     @Test
     public void onlineNoteTest() {
         driver.navigate().to("http://qa.skillbox.ru/module15/bignotes/#/statistic");
@@ -62,13 +65,9 @@ public class praktika6Tests {
         driver.findElement(delButtonLocator).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(notelistLocator));
         driver.findElement(notelistLocator).click();
-        try {
-            sleep:
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(noteTitle1Locator)));
         driver.findElement(delButtonLocator).click();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(contentLocator));
         Assert.assertEquals("Элемент не удален", driver.findElements(contentLocator).size(),0);
     }
 }
