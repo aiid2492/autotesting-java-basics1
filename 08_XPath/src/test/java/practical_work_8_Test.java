@@ -56,7 +56,7 @@ public class practical_work_8_Test {
         Assert.assertEquals(7, driver.findElements(locator25).size());
     }
     @Test
-    public void search_element_home_theater_site_Tests2()
+    public void search_element_book_site_Tests2()
     {
         driver.navigate().to("http://qajava.skillbox.ru/index.html");
         var locator31 = By.xpath("(//a[@href])[last()]"); //Ссылка «О магазине» в футере.
@@ -67,7 +67,7 @@ public class practical_work_8_Test {
         Assert.assertEquals(1, driver.findElements(locator33).size());
     }
     @Test
-    public void search_elementTrash_home_theater_site_Tests3()
+    public void search_elementTrash_book_site_Tests3()
     {
         driver.navigate().to("http://qajava.skillbox.ru/checkout.html");
         var locator34 = By.xpath("//*[text()='Ваш заказ: ']"); // Заголовок «Ваш заказ: в корзине.
@@ -76,7 +76,7 @@ public class practical_work_8_Test {
         Assert.assertEquals("Итого: 0р.", driver.findElement(locator35).getText());
     }
     @Test
-    public void search_cancelButton_home_theater_site_Tests4()
+    public void search_cancelButton_book_site_Tests4()
     {
         driver.navigate().to("http://qajava.skillbox.ru/search.html");
         var locator36 = By.xpath("//*[text()='Отменить']"); // Кнопка «Отменить» на странице поиска.
