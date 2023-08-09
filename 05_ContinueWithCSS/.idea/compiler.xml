@@ -11,5 +11,8 @@
         <module name="04_SearchWithCSS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="05_ContinueWithCSS" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
