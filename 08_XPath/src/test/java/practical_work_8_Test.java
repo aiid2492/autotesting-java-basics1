@@ -45,7 +45,7 @@ public class practical_work_8_Test {
     {
         driver.navigate().to("http://qa.skillbox.ru/module16/maincatalog/");
         var locator21 = By.xpath("(//span)[5]");  //Заголовок пятого курса.
-        var locator22 = By.xpath("(//*[@class='baseCondition'])[last()]"); // Элемент с учебным периодом последнего курса.
+        var locator22 = By.xpath("(//*[@class='baseCondition'])[last()]/p"); // Элемент с учебным периодом последнего курса.
         var locator23 = By.xpath("//*[@href='#']/.."); //Необязательное задание. Все div, которые являются непосредственными родителями для ссылок с href='#'.
         var locator24 = By.xpath("(//*[@href='#']/..)[5]"); // Необязательное задание. Преобразуйте предыдущий локатор, чтобы он возвращал пятый элемент.
         var locator25 = By.xpath("(//*[text()='Все курсы'])/ancestor::*"); //Необязательное задание. Все родительские элементы заголовка «Все курсы».
